@@ -23,6 +23,18 @@ struct WelcomeView: View {
             Text("Your personal vacation concierge")
                 .font(.subheadline)
                 .foregroundStyle(.secondary)
+            
+            NavigationLink {
+                PropertyView(property: Property.example)
+            } label: {
+                Text("Get Started")
+                    .fontWeight(.semibold)
+                    .frame(maxWidth: .infinity)
+                    .padding()
+                    .background(.blue)
+                    .foregroundStyle(.white)
+                    .clipShape(RoundedRectangle(cornerRadius: 12))
+            }
 
         }
         .padding()

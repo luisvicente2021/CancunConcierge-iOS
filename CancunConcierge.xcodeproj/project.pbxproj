@@ -15,6 +15,9 @@
 		84913FB0307EA454008FF1D8 /* CancunConciergeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84913FAF307EA454008FF1D8 /* CancunConciergeUITestsLaunchTests.swift */; };
 		84913FC1307EA658008FF1D8 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84913FC0307EA658008FF1D8 /* WelcomeView.swift */; };
 		84913FC2307EA714008FF1D8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84913F94307EA449008FF1D8 /* ContentView.swift */; };
+		84913FC6307EAAF9008FF1D8 /* PropertyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84913FC5307EAAF9008FF1D8 /* PropertyView.swift */; };
+		84913FC9307EBDFB008FF1D8 /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84913FC8307EBDFB008FF1D8 /* Property.swift */; };
+		84913FCD307EE6E2008FF1D8 /* InfoCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84913FCC307EE6E2008FF1D8 /* InfoCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +49,9 @@
 		84913FAD307EA454008FF1D8 /* CancunConciergeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancunConciergeUITests.swift; sourceTree = "<group>"; };
 		84913FAF307EA454008FF1D8 /* CancunConciergeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancunConciergeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		84913FC0307EA658008FF1D8 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		84913FC5307EAAF9008FF1D8 /* PropertyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyView.swift; sourceTree = "<group>"; };
+		84913FC8307EBDFB008FF1D8 /* Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
+		84913FCC307EE6E2008FF1D8 /* InfoCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +102,7 @@
 		84913F91307EA449008FF1D8 /* CancunConcierge */ = {
 			isa = PBXGroup;
 			children = (
+				84913FCA307EE6BC008FF1D8 /* Shared */,
 				84913FBC307EA5EC008FF1D8 /* Features */,
 				84913F92307EA449008FF1D8 /* CancunConciergeApp.swift */,
 				84913F94307EA449008FF1D8 /* ContentView.swift */,
@@ -133,6 +140,7 @@
 		84913FBC307EA5EC008FF1D8 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				84913FC3307EAAC0008FF1D8 /* Property */,
 				84913FBD307EA605008FF1D8 /* Welcome */,
 			);
 			path = Features;
@@ -160,6 +168,47 @@
 			children = (
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		84913FC3307EAAC0008FF1D8 /* Property */ = {
+			isa = PBXGroup;
+			children = (
+				84913FC7307EAEB8008FF1D8 /* Models */,
+				84913FC4307EAAD1008FF1D8 /* Views */,
+			);
+			path = Property;
+			sourceTree = "<group>";
+		};
+		84913FC4307EAAD1008FF1D8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				84913FC5307EAAF9008FF1D8 /* PropertyView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		84913FC7307EAEB8008FF1D8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				84913FC8307EBDFB008FF1D8 /* Property.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		84913FCA307EE6BC008FF1D8 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				84913FCB307EE6C8008FF1D8 /* Components */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		84913FCB307EE6C8008FF1D8 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				84913FCC307EE6E2008FF1D8 /* InfoCardView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,8 +341,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84913FC9307EBDFB008FF1D8 /* Property.swift in Sources */,
 				84913FC1307EA658008FF1D8 /* WelcomeView.swift in Sources */,
+				84913FC6307EAAF9008FF1D8 /* PropertyView.swift in Sources */,
 				84913F93307EA449008FF1D8 /* CancunConciergeApp.swift in Sources */,
+				84913FCD307EE6E2008FF1D8 /* InfoCardView.swift in Sources */,
 				84913FC2307EA714008FF1D8 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
