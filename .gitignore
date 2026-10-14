@@ -1,0 +1,15 @@
+# Xcode - archivos personales
+xcuserdata/
+*.xcuserstate
+
+# Archivos generados por Xcode
+DerivedData/
+build/
+*.ipa
+*.dSYM
+
+# Archivos de macOS
+.DS_Store
+
+# Swift Package Manager
+.swiftpm/xcode/package.xcworkspace/xcuserdata/
