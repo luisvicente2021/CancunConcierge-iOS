@@ -55,6 +55,19 @@ struct PropertyView: View {
                     }
                 }
                 
+                NavigationLink {
+                    MaintenanceView()
+                } label: {
+                    Label(
+                        "Request Maintenance",
+                        systemImage: "wrench.and.screwdriver"
+                    )
+                    .fontWeight(.semibold)
+                    .frame(maxWidth: .infinity)
+                    .padding()
+                }
+                .buttonStyle(.borderedProminent)
+                
             }
 
             Text("Your home away from home")
