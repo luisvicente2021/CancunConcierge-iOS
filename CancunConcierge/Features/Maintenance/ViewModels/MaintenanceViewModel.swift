@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import FirebaseAuth
 
 final class MaintenanceViewModel: ObservableObject {
     
@@ -22,6 +23,7 @@ final class MaintenanceViewModel: ObservableObject {
     
     private let service = MaintenanceService()
     
+    @MainActor
     func submitRequest() {
         
         guard isFormValid, !isLoading else {
@@ -29,25 +31,29 @@ final class MaintenanceViewModel: ObservableObject {
         }
         isLoading = true
         
-        let request = MaintenanceRequest(
-            id: UUID(),
-            title: title.trimmingCharacters(in: .whitespacesAndNewlines),
-            description: requestDescription.trimmingCharacters(in: .whitespacesAndNewlines),
-            status: .pending,
-            createdAt: Date())
-        
-        service.submitRequest(request) { [weak self] success in
-            guard let self = self else { return }
+        Task {
             
-            self.isLoading = false
-            
-            if success {
-                self.message = "Request submitted successfully"
-            } else {
-                self.message = "Something went wrong"
+            do {
+                guard let uid = Auth.auth().currentUser?.uid else {
+                    throw MaintenanceError.notAuthenticated
+                }
+                
+                let request = MaintenanceRequest(
+                    title: title.trimmingCharacters(in: .whitespacesAndNewlines),
+                    description: requestDescription.trimmingCharacters(in: .whitespacesAndNewlines),
+                    guestId: uid)
+                
+                
+                try await service.submitRequest(request)
+                
+                message = "Maintenance request submitted successfully"
+                title = ""
+                requestDescription = ""
+            }catch {
+                message = "Error: \(error.localizedDescription)"
             }
             
+            isLoading = false
         }
     }
-    
 }

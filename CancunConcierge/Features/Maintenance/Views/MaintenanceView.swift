@@ -51,7 +51,10 @@ struct MaintenanceView: View {
                 }
                 
                 Button {
-                    viewModel.submitRequest()
+                    Task {
+                        try await viewModel.submitRequest()
+                    }
+                 
                 } label: {
                     Text("Submit Request")
                         .frame(maxWidth: .infinity)

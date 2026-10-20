@@ -7,17 +7,14 @@
 
 import Foundation
 
-struct MaintenanceRequest: Identifiable, Codable {
+struct MaintenanceRequest: Encodable {
     
-    let id: UUID
     let title: String
     let description: String
-    let status: MaintenaceStatus
-    let createdAt: Date
-    
+    let guestId: String
 }
 
 extension MaintenanceRequest {
     
-    static let exmaple = MaintenanceRequest(id: UUID(), title: "Air Condition", description: "isn't working in the bedroom", status: .pending, createdAt: Date())
+    static let exmaple = MaintenanceRequest(title: "Air Condition", description: "isn't working in the bedroom",  guestId: "Luisao")
 }
