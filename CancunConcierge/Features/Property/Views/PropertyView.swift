@@ -67,7 +67,17 @@ struct PropertyView: View {
                     .padding()
                 }
                 .buttonStyle(.borderedProminent)
+               
                 
+                NavigationLink {
+                    MaintenanceListView()
+                } label: {
+                    Label("My Maintenance Requests", systemImage: "list.bullet.clipboard")
+                        .fontWeight(.semibold)
+                        .frame(maxWidth: .infinity)
+                        .padding()
+                }
+                .buttonStyle(.borderedProminent)
             }
 
             Text("Your home away from home")

@@ -34,4 +34,38 @@ final class MaintenanceService {
         _ = try await db.collection("maintenance_requests")
             .addDocument(data: data)
     }
+    
+    func fetchRequests() async throws -> [MaintenanceRecord] {
+        
+        guard let uid = Auth.auth().currentUser?.uid else {
+            throw MaintenanceError.notAuthenticated
+        }
+        
+        print("Current Firebase UID: \(uid)")
+        let snapshot = try await db.collection("maintenance_requests")
+            .whereField("guestId", isEqualTo: uid)
+            .getDocuments()
+        
+        print("Documents found: \(snapshot.documents.count)")
+        
+        let requests = snapshot.documents.compactMap { document -> MaintenanceRecord? in
+            
+            let data = document.data()
+            guard
+                let title = data ["title"] as? String,
+                let description = data ["description"] as? String,
+                let guestId = data["guestId"] as? String,
+                let statusString = data["status"] as? String,
+                let status = MaintenaceStatus(rawValue: statusString),
+                let timestamp = data["createdAt"] as? Timestamp
+                    
+            else {
+                return nil
+            }
+            return MaintenanceRecord(id: document.documentID, title: title, description: description, guestId: guestId, status: status, createdAt: timestamp.dateValue())
+                    
+        }
+        
+        return requests
+    }
 }
