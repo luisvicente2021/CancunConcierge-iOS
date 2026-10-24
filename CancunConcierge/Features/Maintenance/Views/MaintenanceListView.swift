@@ -45,9 +45,11 @@ struct MaintenanceListView: View {
             }
         }
         .navigationTitle("My Requests")
-        .task {
-            print("Loading maintenance requests...")
-            await viewModel.loadRequests()
+        .onAppear{
+            viewModel.startListening()
+        }
+        .onDisappear{
+            viewModel.stopListening()
         }
        
         }
