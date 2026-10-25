@@ -33,9 +33,7 @@ struct MaintenanceListView: View {
                             .font(.subheadline)
                             .foregroundStyle(.secondary)
                         
-                        Text(request.status.rawValue)
-                            .font(.caption)
-                            .foregroundStyle(.orange)
+                        MaintenanceStatusBadge(status: request.status)
                         
                         Text(request.createdAt, style: .date)
                             .font(.caption)

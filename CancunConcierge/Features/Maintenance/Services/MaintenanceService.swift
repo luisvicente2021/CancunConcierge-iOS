@@ -109,6 +109,9 @@ final class MaintenanceService {
                     return MaintenanceRecord(id: document.documentID, title: title, description: description, guestId: guestId, status: status, createdAt: timestamp.dateValue())
                     
                 }
+                
+                print("Documentos convertidos\(requests.count)")
+                onchange(requests)
             }
         return listener
         
