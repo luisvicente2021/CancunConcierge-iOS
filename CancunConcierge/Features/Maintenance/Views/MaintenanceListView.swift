@@ -25,13 +25,22 @@ struct MaintenanceListView: View {
             } else {
                 
                 List(viewModel.requests) { request in
+                    
+                    NavigationLink {
+                        MaintenanceDetailView(request: request)
+                         } label: {
                     VStack(alignment: .leading, spacing: 8) {
                         Text(request.title)
                             .font(.headline)
                         
-                        Text(request.description)
-                            .font(.subheadline)
-                            .foregroundStyle(.secondary)
+                        VStack(alignment: .leading, spacing: 8) {
+
+                            Text(request.description)
+                                .font(.subheadline)
+                                .foregroundStyle(.secondary)
+                                .lineLimit(2)
+
+                        }
                         
                         MaintenanceStatusBadge(status: request.status)
                         
@@ -39,6 +48,7 @@ struct MaintenanceListView: View {
                             .font(.caption)
                             .foregroundStyle(.secondary)
                     }
+                        }
                 }
             }
         }

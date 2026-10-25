@@ -26,6 +26,7 @@
 		84C8F988308BD78100C783E6 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 84C8F987308BD78100C783E6 /* FirebaseAuth */; };
 		84C8F98A308BD78C00C783E6 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 84C8F989308BD78C00C783E6 /* FirebaseFirestore */; };
 		B125F3EA308E961B005D340B /* MaintenanceStatusBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = B125F3E9308E961B005D340B /* MaintenanceStatusBadge.swift */; };
+		B125F3EC308EA98C005D340B /* MaintenanceDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B125F3EB308EA98C005D340B /* MaintenanceDetailView.swift */; };
 		B1A91F343086BD5100A97A28 /* TestArticleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A91F333086BD4300A97A28 /* TestArticleResponse.swift */; };
 		B1A91F363086BEC600A97A28 /* TestAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A91F353086BEBE00A97A28 /* TestAPIService.swift */; };
 		B1A91F3D3086C98000A97A28 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B1A91F3C3086C98000A97A28 /* GoogleService-Info.plist */; };
@@ -74,6 +75,7 @@
 		84913FD9307FE534008FF1D8 /* MaintenanceStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceStatus.swift; sourceTree = "<group>"; };
 		84913FDB307FE616008FF1D8 /* MaintenanceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceRequest.swift; sourceTree = "<group>"; };
 		B125F3E9308E961B005D340B /* MaintenanceStatusBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceStatusBadge.swift; sourceTree = "<group>"; };
+		B125F3EB308EA98C005D340B /* MaintenanceDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceDetailView.swift; sourceTree = "<group>"; };
 		B1A91F333086BD4300A97A28 /* TestArticleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestArticleResponse.swift; sourceTree = "<group>"; };
 		B1A91F353086BEBE00A97A28 /* TestAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAPIService.swift; sourceTree = "<group>"; };
 		B1A91F3C3086C98000A97A28 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -276,6 +278,7 @@
 				B1EF1381308993BE000197EF /* MaintenanceListView.swift */,
 				84913FD7307FD9E4008FF1D8 /* MaintenanceView.swift */,
 				B125F3E9308E961B005D340B /* MaintenanceStatusBadge.swift */,
+				B125F3EB308EA98C005D340B /* MaintenanceDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -479,6 +482,7 @@
 				84913FDC307FE616008FF1D8 /* MaintenanceRequest.swift in Sources */,
 				84913FC6307EAAF9008FF1D8 /* PropertyView.swift in Sources */,
 				84913FD6307FD7B2008FF1D8 /* MaintenanceViewModel.swift in Sources */,
+				B125F3EC308EA98C005D340B /* MaintenanceDetailView.swift in Sources */,
 				84913F93307EA449008FF1D8 /* CancunConciergeApp.swift in Sources */,
 				84913FCD307EE6E2008FF1D8 /* InfoCardView.swift in Sources */,
 				84913FD8307FD9E4008FF1D8 /* MaintenanceView.swift in Sources */,
