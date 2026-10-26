@@ -15,4 +15,12 @@ final class AuthService {
         return result.user.uid
     }
     
+    func signInAdmin(email: String, password: String) async throws -> User {
+        let result = try await Auth.auth().signIn(withEmail: email, password: password)
+        
+        return result.user
+    }
+    
+    
+    
 }

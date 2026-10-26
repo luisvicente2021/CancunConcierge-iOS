@@ -26,6 +26,11 @@
 		84C8F988308BD78100C783E6 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 84C8F987308BD78100C783E6 /* FirebaseAuth */; };
 		84C8F98A308BD78C00C783E6 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 84C8F989308BD78C00C783E6 /* FirebaseFirestore */; };
 		84DAD3B6308FE643001BE4CE /* MaintenanceDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAD3B5308FE643001BE4CE /* MaintenanceDetailViewModel.swift */; };
+		84DAD3B9308FFFAD001BE4CE /* UserRole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAD3B8308FFFAD001BE4CE /* UserRole.swift */; };
+		84DAD3BB30900085001BE4CE /* AppUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAD3BA30900085001BE4CE /* AppUser.swift */; };
+		84DAD3BE309002FE001BE4CE /* AdminLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAD3BD309002FE001BE4CE /* AdminLoginViewModel.swift */; };
+		84DAD3C13090049F001BE4CE /* AdminLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAD3C03090049F001BE4CE /* AdminLoginView.swift */; };
+		84DAD3C330900E8B001BE4CE /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAD3C230900E8B001BE4CE /* UserService.swift */; };
 		B125F3EA308E961B005D340B /* MaintenanceStatusBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = B125F3E9308E961B005D340B /* MaintenanceStatusBadge.swift */; };
 		B125F3EC308EA98C005D340B /* MaintenanceDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B125F3EB308EA98C005D340B /* MaintenanceDetailView.swift */; };
 		B1A91F343086BD5100A97A28 /* TestArticleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A91F333086BD4300A97A28 /* TestArticleResponse.swift */; };
@@ -76,6 +81,11 @@
 		84913FD9307FE534008FF1D8 /* MaintenanceStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceStatus.swift; sourceTree = "<group>"; };
 		84913FDB307FE616008FF1D8 /* MaintenanceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceRequest.swift; sourceTree = "<group>"; };
 		84DAD3B5308FE643001BE4CE /* MaintenanceDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceDetailViewModel.swift; sourceTree = "<group>"; };
+		84DAD3B8308FFFAD001BE4CE /* UserRole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRole.swift; sourceTree = "<group>"; };
+		84DAD3BA30900085001BE4CE /* AppUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUser.swift; sourceTree = "<group>"; };
+		84DAD3BD309002FE001BE4CE /* AdminLoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminLoginViewModel.swift; sourceTree = "<group>"; };
+		84DAD3C03090049F001BE4CE /* AdminLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminLoginView.swift; sourceTree = "<group>"; };
+		84DAD3C230900E8B001BE4CE /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		B125F3E9308E961B005D340B /* MaintenanceStatusBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceStatusBadge.swift; sourceTree = "<group>"; };
 		B125F3EB308EA98C005D340B /* MaintenanceDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceDetailView.swift; sourceTree = "<group>"; };
 		B1A91F333086BD4300A97A28 /* TestArticleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestArticleResponse.swift; sourceTree = "<group>"; };
@@ -303,6 +313,31 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		84DAD3B7308FFF8F001BE4CE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				84DAD3B8308FFFAD001BE4CE /* UserRole.swift */,
+				84DAD3BA30900085001BE4CE /* AppUser.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		84DAD3BC309002E3001BE4CE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				84DAD3BD309002FE001BE4CE /* AdminLoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		84DAD3BF30900480001BE4CE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				84DAD3C03090049F001BE4CE /* AdminLoginView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		B1A91F323086BD2700A97A28 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
@@ -322,6 +357,9 @@
 		B1A91F413086EBAA00A97A28 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				84DAD3BF30900480001BE4CE /* Views */,
+				84DAD3BC309002E3001BE4CE /* ViewModel */,
+				84DAD3B7308FFF8F001BE4CE /* Models */,
 				B1A91F423086EBC400A97A28 /* Services */,
 			);
 			path = Authentication;
@@ -331,6 +369,7 @@
 			isa = PBXGroup;
 			children = (
 				B1A91F433086EBD200A97A28 /* AuthService.swift */,
+				84DAD3C230900E8B001BE4CE /* UserService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -479,6 +518,8 @@
 				B1EF1382308993C9000197EF /* MaintenanceListView.swift in Sources */,
 				84913FD4307FD5A1008FF1D8 /* MaintenanceService.swift in Sources */,
 				84913FC1307EA658008FF1D8 /* WelcomeView.swift in Sources */,
+				84DAD3C330900E8B001BE4CE /* UserService.swift in Sources */,
+				84DAD3BB30900085001BE4CE /* AppUser.swift in Sources */,
 				B1EF137E30898BA4000197EF /* MaintenanceRecord.swift in Sources */,
 				84913FDA307FE535008FF1D8 /* MaintenanceStatus.swift in Sources */,
 				B1A91F363086BEC600A97A28 /* TestAPIService.swift in Sources */,
@@ -489,7 +530,10 @@
 				B125F3EC308EA98C005D340B /* MaintenanceDetailView.swift in Sources */,
 				84913F93307EA449008FF1D8 /* CancunConciergeApp.swift in Sources */,
 				84913FCD307EE6E2008FF1D8 /* InfoCardView.swift in Sources */,
+				84DAD3B9308FFFAD001BE4CE /* UserRole.swift in Sources */,
+				84DAD3BE309002FE001BE4CE /* AdminLoginViewModel.swift in Sources */,
 				84913FD8307FD9E4008FF1D8 /* MaintenanceView.swift in Sources */,
+				84DAD3C13090049F001BE4CE /* AdminLoginView.swift in Sources */,
 				B1A91F343086BD5100A97A28 /* TestArticleResponse.swift in Sources */,
 				84913FC2307EA714008FF1D8 /* ContentView.swift in Sources */,
 				B1EF13803089904F000197EF /* MaintenanceListViewModel.swift in Sources */,
