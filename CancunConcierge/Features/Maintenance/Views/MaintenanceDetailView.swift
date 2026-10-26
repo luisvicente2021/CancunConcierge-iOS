@@ -9,12 +9,18 @@ import SwiftUI
 
 struct MaintenanceDetailView: View {
 
-    let request: MaintenanceRecord
+    @StateObject private var viewModel: MaintenanceDetailViewModel
+    
+    init(request: MaintenanceRecord) {
+        _viewModel = StateObject(
+            wrappedValue: MaintenanceDetailViewModel(request: request)
+        )
+    }
 
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
 
-            Text(request.title)
+            Text(viewModel.request.title)
                 .font(.title)
                 .bold()
 
@@ -23,7 +29,7 @@ struct MaintenanceDetailView: View {
                     .font(.headline)
                     .foregroundStyle(.secondary)
 
-                Text(request.description)
+                Text(viewModel.request.description)
                     .font(.body)
             }
 
@@ -33,15 +39,28 @@ struct MaintenanceDetailView: View {
                     .font(.headline)
                     .foregroundStyle(.secondary)
 
-                MaintenanceStatusBadge(status: request.status)
+                VStack(alignment: .leading, spacing: 8) {
+                    Text("Status")
+                        .font(.headline)
+                        .foregroundStyle(.secondary)
+
+                    MaintenanceStatusBadge(status: viewModel.request.status)
+                }
             }
             
-            HStack(spacing: 8) {
-                Image(systemName: "calendar")
+            VStack(alignment: .leading, spacing: 8) {
+
+                Text("Created on")
+                    .font(.headline)
                     .foregroundStyle(.secondary)
 
-                Text(request.createdAt, style: .date)
-                    .foregroundStyle(.secondary)
+                HStack(spacing: 8) {
+                    Image(systemName: "calendar")
+                        .foregroundStyle(.secondary)
+
+                    Text(viewModel.request.createdAt, style: .date)
+                        .foregroundStyle(.secondary)
+                }
             }
 
             Spacer()
@@ -49,6 +68,13 @@ struct MaintenanceDetailView: View {
         .padding()
         .navigationTitle("Request Details")
         .navigationBarTitleDisplayMode(.inline)
+        
+        .onAppear {
+            viewModel.startListening()
+        }
+        .onDisappear {
+            viewModel.stopListening()
+        }
     }
 }
 #Preview {

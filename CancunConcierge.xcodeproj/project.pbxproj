@@ -25,6 +25,7 @@
 		84913FDC307FE616008FF1D8 /* MaintenanceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84913FDB307FE616008FF1D8 /* MaintenanceRequest.swift */; };
 		84C8F988308BD78100C783E6 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 84C8F987308BD78100C783E6 /* FirebaseAuth */; };
 		84C8F98A308BD78C00C783E6 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 84C8F989308BD78C00C783E6 /* FirebaseFirestore */; };
+		84DAD3B6308FE643001BE4CE /* MaintenanceDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAD3B5308FE643001BE4CE /* MaintenanceDetailViewModel.swift */; };
 		B125F3EA308E961B005D340B /* MaintenanceStatusBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = B125F3E9308E961B005D340B /* MaintenanceStatusBadge.swift */; };
 		B125F3EC308EA98C005D340B /* MaintenanceDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B125F3EB308EA98C005D340B /* MaintenanceDetailView.swift */; };
 		B1A91F343086BD5100A97A28 /* TestArticleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A91F333086BD4300A97A28 /* TestArticleResponse.swift */; };
@@ -74,6 +75,7 @@
 		84913FD7307FD9E4008FF1D8 /* MaintenanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceView.swift; sourceTree = "<group>"; };
 		84913FD9307FE534008FF1D8 /* MaintenanceStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceStatus.swift; sourceTree = "<group>"; };
 		84913FDB307FE616008FF1D8 /* MaintenanceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceRequest.swift; sourceTree = "<group>"; };
+		84DAD3B5308FE643001BE4CE /* MaintenanceDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceDetailViewModel.swift; sourceTree = "<group>"; };
 		B125F3E9308E961B005D340B /* MaintenanceStatusBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceStatusBadge.swift; sourceTree = "<group>"; };
 		B125F3EB308EA98C005D340B /* MaintenanceDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceDetailView.swift; sourceTree = "<group>"; };
 		B1A91F333086BD4300A97A28 /* TestArticleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestArticleResponse.swift; sourceTree = "<group>"; };
@@ -288,6 +290,7 @@
 			children = (
 				B1EF137F30899042000197EF /* MaintenanceListViewModel.swift */,
 				84913FD5307FD7B2008FF1D8 /* MaintenanceViewModel.swift */,
+				84DAD3B5308FE643001BE4CE /* MaintenanceDetailViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -470,6 +473,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84DAD3B6308FE643001BE4CE /* MaintenanceDetailViewModel.swift in Sources */,
 				B1A91F463086F76D00A97A28 /* MaintenanceError.swift in Sources */,
 				84913FC9307EBDFB008FF1D8 /* Property.swift in Sources */,
 				B1EF1382308993C9000197EF /* MaintenanceListView.swift in Sources */,
@@ -650,6 +654,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CancunConcierge/Preview Content\"";
@@ -668,6 +673,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.luisvicente.CancunConcierge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -679,6 +685,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CancunConcierge/Preview Content\"";
@@ -697,6 +704,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.luisvicente.CancunConcierge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -116,4 +116,48 @@ final class MaintenanceService {
         return listener
         
     }
+    
+    func listenToRequest(
+        id: String,
+        onChange: @escaping (MaintenanceRecord?) -> Void
+    ) -> ListenerRegistration {
+
+        return db.collection("maintenance_requests")
+            .document(id)
+            .addSnapshotListener { snapshot, error in
+
+                if let error = error {
+                    print("Error listening to request: \(error.localizedDescription)")
+                    return
+                }
+
+                guard let snapshot = snapshot,
+                      snapshot.exists else {
+                    onChange(nil)
+                    return
+                }
+
+                let data = snapshot.data() ?? [:]
+
+                guard let title = data["title"] as? String,
+                      let description = data["description"] as? String,
+                      let guestId = data["guestId"] as? String,
+                      let statusString = data["status"] as? String,
+                      let status = MaintenaceStatus(rawValue: statusString),
+                      let timestamp = data["createdAt"] as? Timestamp else {
+                    return
+                }
+
+                let request = MaintenanceRecord(
+                    id: snapshot.documentID,
+                    title: title,
+                    description: description,
+                    guestId: guestId,
+                    status: status,
+                    createdAt: timestamp.dateValue()
+                )
+
+                onChange(request)
+            }
+    }
 }
