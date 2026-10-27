@@ -8,20 +8,25 @@
 import Foundation
 
 struct Property: Identifiable {
-    let id: UUID
+
+    let id: String
+    let ownerId: String
+
     let name: String
     let address: String
+
     let wifiName: String
     let wifiPassword: String
+
     let checkIn: String
     let checkOut: String
 }
 
-
 extension Property {
 
     static let example = Property(
-        id: UUID(),
+        id: "demo-property-001",
+        ownerId: "demo-owner-001",
         name: "Cancún Ocean View",
         address: "Zona Hotelera, Cancún",
         wifiName: "OceanView_Guest",
