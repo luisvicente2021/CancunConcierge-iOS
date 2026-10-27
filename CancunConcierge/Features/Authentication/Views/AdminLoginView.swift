@@ -49,6 +49,9 @@ struct AdminLoginView: View {
 
         }
         .padding()
+               .navigationDestination(isPresented: $viewModel.isAuthenticated) {
+                   AdminDashboardView()
+               }
     }
 }
 

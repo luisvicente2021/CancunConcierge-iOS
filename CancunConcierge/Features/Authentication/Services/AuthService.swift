@@ -21,6 +21,7 @@ final class AuthService {
         return result.user
     }
     
-    
-    
+    func signOut() throws {
+        try Auth.auth().signOut()
+    }
 }
