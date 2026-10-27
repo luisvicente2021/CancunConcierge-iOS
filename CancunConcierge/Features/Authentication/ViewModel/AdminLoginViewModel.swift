@@ -17,6 +17,7 @@ final class AdminLoginViewModel: ObservableObject {
     @Published var isAuthenticated = false
     
     private let authService = AuthService()
+    private let userService = UserService()
     
     func signIn() async {
         guard !email.isEmpty, !password.isEmpty else {
@@ -30,14 +31,26 @@ final class AdminLoginViewModel: ObservableObject {
         defer { isLoading = false }
         
         do {
-            _ = try await authService.signInAdmin(
+            let firebaseUser = try await authService.signInAdmin(
                 email: email,
                 password: password
             )
-            
+
+            let appUser = try await userService.getUser(
+                uid: firebaseUser.uid
+            )
+
+            guard appUser?.role == .admin else {
+                isAuthenticated = false
+                errorMessage = "You don't have administrator permissions."
+                return
+            }
+
             isAuthenticated = true
-            
+            print("✅ Admin login successful")
+
         } catch {
+            isAuthenticated = false
             errorMessage = error.localizedDescription
         }
     }

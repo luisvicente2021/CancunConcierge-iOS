@@ -36,6 +36,18 @@ struct WelcomeView: View {
                     .clipShape(RoundedRectangle(cornerRadius: 12))
             }
             
+            NavigationLink {
+                AdminLoginView()
+            } label: {
+                Text("Owner Login")
+                    .fontWeight(.semibold)
+                    .frame(maxWidth: .infinity)
+                    .padding()
+                    .background(.green)
+                    .foregroundStyle(.white)
+                    .clipShape(RoundedRectangle(cornerRadius: 12))
+            }
+            
             Button("Test API") {
                 Task {
                     do {
