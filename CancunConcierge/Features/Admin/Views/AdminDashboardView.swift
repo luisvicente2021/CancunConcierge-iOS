@@ -32,10 +32,15 @@ struct AdminDashboardView: View {
 
             VStack(spacing: 16) {
 
-                dashboardButton(
-                    title: "My Properties",
-                    icon: "house.fill"
-                )
+                NavigationLink {
+                    PropertyListView()
+                } label: {
+                    dashboardButton(
+                        title: "My Properties",
+                        icon: "house"
+                    )
+                }
+                .buttonStyle(.plain)
 
                 dashboardButton(
                     title: "Maintenance Requests",
