@@ -34,25 +34,30 @@ struct PropertyListView: View {
             } else {
                 List(viewModel.properties) { property in
 
-                    VStack(alignment: .leading, spacing: 8) {
+                    NavigationLink {
+                        PropertyDetailView(property: property)
+                    } label: {
 
-                        Text(property.name)
-                            .font(.headline)
+                        VStack(alignment: .leading, spacing: 8) {
 
-                        Label(
-                            property.address,
-                            systemImage: "mappin.and.ellipse"
-                        )
-                        .font(.subheadline)
-                        .foregroundStyle(.secondary)
+                            Text(property.name)
+                                .font(.headline)
 
-                        Text("Check-in: \(property.checkIn)")
-                            .font(.caption)
+                            Label(
+                                property.address,
+                                systemImage: "mappin.and.ellipse"
+                            )
+                            .font(.subheadline)
+                            .foregroundStyle(.secondary)
 
-                        Text("Check-out: \(property.checkOut)")
-                            .font(.caption)
+                            Text("Check-in: \(property.checkIn)")
+                                .font(.caption)
+
+                            Text("Check-out: \(property.checkOut)")
+                                .font(.caption)
+                        }
+                        .padding(.vertical, 6)
                     }
-                    .padding(.vertical, 6)
                 }
             }
         }

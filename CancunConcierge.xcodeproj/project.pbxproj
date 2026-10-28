@@ -11,6 +11,9 @@
 		8443EA323091455B00F7C28D /* PropertyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443EA313091455B00F7C28D /* PropertyService.swift */; };
 		8443EA35309276B700F7C28D /* PropertyListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443EA34309276B700F7C28D /* PropertyListViewModel.swift */; };
 		8443EA373092778000F7C28D /* PropertyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443EA363092778000F7C28D /* PropertyListView.swift */; };
+		8443EA39309280CF00F7C28D /* PropertyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443EA38309280CF00F7C28D /* PropertyDetailView.swift */; };
+		8443EA3B3092834700F7C28D /* PropertyEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443EA3A3092834700F7C28D /* PropertyEditViewModel.swift */; };
+		8443EA3D309283D600F7C28D /* PropertyEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443EA3C309283D600F7C28D /* PropertyEditView.swift */; };
 		84913F93307EA449008FF1D8 /* CancunConciergeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84913F92307EA449008FF1D8 /* CancunConciergeApp.swift */; };
 		84913F97307EA453008FF1D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84913F96307EA453008FF1D8 /* Assets.xcassets */; };
 		84913F9A307EA453008FF1D8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84913F99307EA453008FF1D8 /* Preview Assets.xcassets */; };
@@ -69,6 +72,9 @@
 		8443EA313091455B00F7C28D /* PropertyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyService.swift; sourceTree = "<group>"; };
 		8443EA34309276B700F7C28D /* PropertyListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyListViewModel.swift; sourceTree = "<group>"; };
 		8443EA363092778000F7C28D /* PropertyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyListView.swift; sourceTree = "<group>"; };
+		8443EA38309280CF00F7C28D /* PropertyDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyDetailView.swift; sourceTree = "<group>"; };
+		8443EA3A3092834700F7C28D /* PropertyEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyEditViewModel.swift; sourceTree = "<group>"; };
+		8443EA3C309283D600F7C28D /* PropertyEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyEditView.swift; sourceTree = "<group>"; };
 		84913F8F307EA449008FF1D8 /* CancunConcierge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CancunConcierge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84913F92307EA449008FF1D8 /* CancunConciergeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancunConciergeApp.swift; sourceTree = "<group>"; };
 		84913F94307EA449008FF1D8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -161,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				8443EA34309276B700F7C28D /* PropertyListViewModel.swift */,
+				8443EA3A3092834700F7C28D /* PropertyEditViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -278,6 +285,8 @@
 			children = (
 				84913FC5307EAAF9008FF1D8 /* PropertyView.swift */,
 				8443EA363092778000F7C28D /* PropertyListView.swift */,
+				8443EA38309280CF00F7C28D /* PropertyDetailView.swift */,
+				8443EA3C309283D600F7C28D /* PropertyEditView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -564,10 +573,13 @@
 				84913FD4307FD5A1008FF1D8 /* MaintenanceService.swift in Sources */,
 				84913FC1307EA658008FF1D8 /* WelcomeView.swift in Sources */,
 				8443EA373092778000F7C28D /* PropertyListView.swift in Sources */,
+				8443EA39309280CF00F7C28D /* PropertyDetailView.swift in Sources */,
 				84DAD3C330900E8B001BE4CE /* UserService.swift in Sources */,
 				84DAD3BB30900085001BE4CE /* AppUser.swift in Sources */,
 				B1EF137E30898BA4000197EF /* MaintenanceRecord.swift in Sources */,
+				8443EA3D309283D600F7C28D /* PropertyEditView.swift in Sources */,
 				84913FDA307FE535008FF1D8 /* MaintenanceStatus.swift in Sources */,
+				8443EA3B3092834700F7C28D /* PropertyEditViewModel.swift in Sources */,
 				B1A91F363086BEC600A97A28 /* TestAPIService.swift in Sources */,
 				8443EA2F30913B0F00F7C28D /* AdminDashboardView.swift in Sources */,
 				B125F3EA308E961B005D340B /* MaintenanceStatusBadge.swift in Sources */,
