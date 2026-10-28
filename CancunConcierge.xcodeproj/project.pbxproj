@@ -14,6 +14,8 @@
 		8443EA39309280CF00F7C28D /* PropertyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443EA38309280CF00F7C28D /* PropertyDetailView.swift */; };
 		8443EA3B3092834700F7C28D /* PropertyEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443EA3A3092834700F7C28D /* PropertyEditViewModel.swift */; };
 		8443EA3D309283D600F7C28D /* PropertyEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443EA3C309283D600F7C28D /* PropertyEditView.swift */; };
+		8443EA3F3092920200F7C28D /* PropertyCreateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443EA3E3092920100F7C28D /* PropertyCreateViewModel.swift */; };
+		8443EA41309292C100F7C28D /* PropertyCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443EA40309292C100F7C28D /* PropertyCreateView.swift */; };
 		84913F93307EA449008FF1D8 /* CancunConciergeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84913F92307EA449008FF1D8 /* CancunConciergeApp.swift */; };
 		84913F97307EA453008FF1D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84913F96307EA453008FF1D8 /* Assets.xcassets */; };
 		84913F9A307EA453008FF1D8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84913F99307EA453008FF1D8 /* Preview Assets.xcassets */; };
@@ -75,6 +77,8 @@
 		8443EA38309280CF00F7C28D /* PropertyDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyDetailView.swift; sourceTree = "<group>"; };
 		8443EA3A3092834700F7C28D /* PropertyEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyEditViewModel.swift; sourceTree = "<group>"; };
 		8443EA3C309283D600F7C28D /* PropertyEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyEditView.swift; sourceTree = "<group>"; };
+		8443EA3E3092920100F7C28D /* PropertyCreateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyCreateViewModel.swift; sourceTree = "<group>"; };
+		8443EA40309292C100F7C28D /* PropertyCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyCreateView.swift; sourceTree = "<group>"; };
 		84913F8F307EA449008FF1D8 /* CancunConcierge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CancunConcierge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84913F92307EA449008FF1D8 /* CancunConciergeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancunConciergeApp.swift; sourceTree = "<group>"; };
 		84913F94307EA449008FF1D8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -168,6 +172,7 @@
 			children = (
 				8443EA34309276B700F7C28D /* PropertyListViewModel.swift */,
 				8443EA3A3092834700F7C28D /* PropertyEditViewModel.swift */,
+				8443EA3E3092920100F7C28D /* PropertyCreateViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -287,6 +292,7 @@
 				8443EA363092778000F7C28D /* PropertyListView.swift */,
 				8443EA38309280CF00F7C28D /* PropertyDetailView.swift */,
 				8443EA3C309283D600F7C28D /* PropertyEditView.swift */,
+				8443EA40309292C100F7C28D /* PropertyCreateView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -590,10 +596,12 @@
 				B125F3EC308EA98C005D340B /* MaintenanceDetailView.swift in Sources */,
 				84913F93307EA449008FF1D8 /* CancunConciergeApp.swift in Sources */,
 				84913FCD307EE6E2008FF1D8 /* InfoCardView.swift in Sources */,
+				8443EA3F3092920200F7C28D /* PropertyCreateViewModel.swift in Sources */,
 				84DAD3B9308FFFAD001BE4CE /* UserRole.swift in Sources */,
 				84DAD3BE309002FE001BE4CE /* AdminLoginViewModel.swift in Sources */,
 				84913FD8307FD9E4008FF1D8 /* MaintenanceView.swift in Sources */,
 				84DAD3C13090049F001BE4CE /* AdminLoginView.swift in Sources */,
+				8443EA41309292C100F7C28D /* PropertyCreateView.swift in Sources */,
 				B1A91F343086BD5100A97A28 /* TestArticleResponse.swift in Sources */,
 				84913FC2307EA714008FF1D8 /* ContentView.swift in Sources */,
 				B1EF13803089904F000197EF /* MaintenanceListViewModel.swift in Sources */,

@@ -126,4 +126,38 @@ final class PropertyService {
             checkOut: checkOut
         )
     }
+    
+    func createProperty(_ property: Property) async throws {
+
+        guard let ownerId = Auth.auth().currentUser?.uid else {
+            throw NSError(
+                domain: "PropertyService",
+                code: 401,
+                userInfo: [
+                    NSLocalizedDescriptionKey: "User is not authenticated."
+                ]
+            )
+        }
+
+        guard property.ownerId == ownerId else {
+            throw NSError(
+                domain: "PropertyService",
+                code: 403,
+                userInfo: [
+                    NSLocalizedDescriptionKey: "Invalid property owner."
+                ]
+            )
+        }
+
+        try await db.collection("properties")
+            .addDocument(data: [
+                "ownerId": ownerId,
+                "name": property.name,
+                "address": property.address,
+                "wifiName": property.wifiName,
+                "wifiPassword": property.wifiPassword,
+                "checkIn": property.checkIn,
+                "checkOut": property.checkOut
+            ])
+    }
 }

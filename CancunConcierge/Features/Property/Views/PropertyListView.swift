@@ -62,8 +62,19 @@ struct PropertyListView: View {
             }
         }
         .navigationTitle("My Properties")
-        .task {
-            await viewModel.loadProperties()
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                NavigationLink {
+                    PropertyCreateView()
+                } label: {
+                    Image(systemName: "plus")
+                }
+            }
+        }
+        .onAppear {
+            Task {
+                await viewModel.loadProperties()
+            }
         }
     }
 }
