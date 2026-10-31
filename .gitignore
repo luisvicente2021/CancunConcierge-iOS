@@ -13,3 +13,16 @@ build/
 
 # Swift Package Manager
 .swiftpm/xcode/package.xcworkspace/xcuserdata/
+# Firebase Cloud Functions
+functions/node_modules/
+functions/lib/
+functions/.env
+functions/.env.*
+functions/.runtimeconfig.json
+
+# Firebase CLI
+.firebase/
+firebase-debug*.log
+
+# Archivos de respaldo
+*.backup

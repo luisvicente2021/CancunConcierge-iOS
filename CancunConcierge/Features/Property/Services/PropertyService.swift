@@ -48,6 +48,7 @@ final class PropertyService {
             return Property(
                 id: document.documentID,
                 ownerId: propertyOwnerId,
+                accessCode: data["accessCode"] as? String ?? "",
                 name: name,
                 address: address,
                 wifiName: wifiName,
@@ -118,6 +119,7 @@ final class PropertyService {
         return Property(
             id: document.documentID,
             ownerId: propertyOwnerId,
+            accessCode: data["accessCode"] as? String ?? "",
             name: name,
             address: address,
             wifiName: wifiName,
@@ -152,6 +154,7 @@ final class PropertyService {
         try await db.collection("properties")
             .addDocument(data: [
                 "ownerId": ownerId,
+                "accessCode": property.accessCode,
                 "name": property.name,
                 "address": property.address,
                 "wifiName": property.wifiName,

@@ -53,6 +53,7 @@ final class PropertyEditViewModel: ObservableObject {
         let updatedProperty = Property(
             id: property.id,
             ownerId: property.ownerId,
+            accessCode: property.accessCode,
             name: name,
             address: address,
             wifiName: wifiName,

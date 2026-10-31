@@ -11,6 +11,8 @@ struct Property: Identifiable {
 
     let id: String
     let ownerId: String
+    
+    let accessCode: String
 
     let name: String
     let address: String
@@ -27,6 +29,7 @@ extension Property {
     static let example = Property(
         id: "demo-property-001",
         ownerId: "demo-owner-001",
+        accessCode: "CN-DEMO01",
         name: "Cancún Ocean View",
         address: "Zona Hotelera, Cancún",
         wifiName: "OceanView_Guest",
