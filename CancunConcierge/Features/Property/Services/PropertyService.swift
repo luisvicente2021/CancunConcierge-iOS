@@ -8,10 +8,12 @@
 import Foundation
 import FirebaseAuth
 import FirebaseFirestore
+import FirebaseFunctions
 
 final class PropertyService {
 
     private let db = Firestore.firestore()
+    private let functions = Functions.functions()
 
     func getProperties() async throws -> [Property] {
 
@@ -151,16 +153,17 @@ final class PropertyService {
             )
         }
 
-        try await db.collection("properties")
-            .addDocument(data: [
-                "ownerId": ownerId,
-                "accessCode": property.accessCode,
-                "name": property.name,
-                "address": property.address,
-                "wifiName": property.wifiName,
-                "wifiPassword": property.wifiPassword,
-                "checkIn": property.checkIn,
-                "checkOut": property.checkOut
-            ])
+        let propertyData: [String: Any] = [
+            "name": property.name,
+            "address": property.address,
+            "wifiName": property.wifiName,
+            "wifiPassword": property.wifiPassword,
+            "checkIn": property.checkIn,
+            "checkOut": property.checkOut
+        ]
+
+        _ = try await functions
+            .httpsCallable("createProperty")
+            .call(propertyData)
     }
 }

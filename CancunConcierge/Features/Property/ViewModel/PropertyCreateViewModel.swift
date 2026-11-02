@@ -47,19 +47,10 @@ final class PropertyCreateViewModel: ObservableObject {
             isSaving = false
         }
         
-        let accessCode: String
-
-        do {
-            accessCode = try AccessCodeGenerator.generate()
-        } catch {
-            errorMessage = "Unable to generate an access code. Please try again."
-            return
-        }
-
         let property = Property(
             id: "",
             ownerId: ownerId, 
-            accessCode: accessCode,
+            accessCode: "",
             name: name,
             address: address,
             wifiName: wifiName,

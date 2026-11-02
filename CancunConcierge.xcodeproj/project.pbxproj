@@ -17,6 +17,7 @@
 		8443EA3F3092920200F7C28D /* PropertyCreateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443EA3E3092920100F7C28D /* PropertyCreateViewModel.swift */; };
 		8443EA41309292C100F7C28D /* PropertyCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443EA40309292C100F7C28D /* PropertyCreateView.swift */; };
 		8443EA433093DEA800F7C28D /* AccessCodeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443EA423093DEA800F7C28D /* AccessCodeGenerator.swift */; };
+		8443EA45309921FB00F7C28D /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = 8443EA44309921FB00F7C28D /* FirebaseFunctions */; };
 		84913F93307EA449008FF1D8 /* CancunConciergeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84913F92307EA449008FF1D8 /* CancunConciergeApp.swift */; };
 		84913F97307EA453008FF1D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84913F96307EA453008FF1D8 /* Assets.xcassets */; };
 		84913F9A307EA453008FF1D8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84913F99307EA453008FF1D8 /* Preview Assets.xcassets */; };
@@ -123,6 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8443EA45309921FB00F7C28D /* FirebaseFunctions in Frameworks */,
 				84C8F988308BD78100C783E6 /* FirebaseAuth in Frameworks */,
 				84C8F98A308BD78C00C783E6 /* FirebaseFirestore in Frameworks */,
 			);
@@ -455,6 +457,7 @@
 			packageProductDependencies = (
 				84C8F987308BD78100C783E6 /* FirebaseAuth */,
 				84C8F989308BD78C00C783E6 /* FirebaseFirestore */,
+				8443EA44309921FB00F7C28D /* FirebaseFunctions */,
 			);
 			productName = CancunConcierge;
 			productReference = 84913F8F307EA449008FF1D8 /* CancunConcierge.app */;
@@ -956,6 +959,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		8443EA44309921FB00F7C28D /* FirebaseFunctions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84C8F986308BD32A00C783E6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFunctions;
+		};
 		84C8F987308BD78100C783E6 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 84C8F986308BD32A00C783E6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
