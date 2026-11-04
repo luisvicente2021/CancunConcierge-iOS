@@ -1,0 +1,98 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // SOLICITUDES DE MANTENIMIENTO
+    match /maintenance_requests/{requestId} {
+
+      allow create: if request.auth != null
+        && request.resource.data.keys().hasOnly([
+          'title',
+          'description',
+          'guestId',
+          'status',
+          'createdAt'
+        ])
+        && request.resource.data.keys().hasAll([
+          'title',
+          'description',
+          'guestId',
+          'status',
+          'createdAt'
+        ])
+        && request.resource.data.guestId == request.auth.uid
+        && request.resource.data.title is string
+        && request.resource.data.title.size() > 0
+        && request.resource.data.description is string
+        && request.resource.data.status == 'pending'
+        && request.resource.data.createdAt == request.time;
+
+      allow get, list: if request.auth != null
+        && resource.data.guestId == request.auth.uid;
+
+      allow update, delete: if false;
+    }
+
+    // USUARIOS
+    match /users/{userId} {
+
+      allow get: if request.auth != null
+        && request.auth.uid == userId;
+
+      allow list: if false;
+
+      allow create, update, delete: if false;
+    }
+
+    // PROPIEDADES
+    match /properties/{propertyId} {
+
+      // Solo el administrador puede consultar sus propiedades.
+      allow get, list: if request.auth != null
+        && exists(/databases/$(database)/documents/users/$(request.auth.uid))
+        && get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin'
+        && resource.data.ownerId == request.auth.uid;
+
+      // Solo el propietario administrador puede editar.
+      allow update: if request.auth != null
+
+        && exists(/databases/$(database)/documents/users/$(request.auth.uid))
+
+        && get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin'
+
+        && resource.data.ownerId == request.auth.uid
+
+        // Impedir cambiar el propietario.
+        && request.resource.data.ownerId == resource.data.ownerId
+
+        // Permitir modificar únicamente estos campos.
+        && request.resource.data.diff(resource.data)
+             .affectedKeys().hasOnly([
+               'name',
+               'address',
+               'wifiName',
+               'wifiPassword',
+               'checkIn',
+               'checkOut'
+             ])
+
+        // Validar los tipos.
+        && request.resource.data.name is string
+        && request.resource.data.address is string
+        && request.resource.data.wifiName is string
+        && request.resource.data.wifiPassword is string
+        && request.resource.data.checkIn is string
+        && request.resource.data.checkOut is string;
+
+
+// La creación de propiedades se realiza mediante Cloud Functions.
+allow create: if false;
+
+
+// Por ahora no permitimos eliminar departamentos.
+allow delete: if false;
+    }
+
+  }
+}
