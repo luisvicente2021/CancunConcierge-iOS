@@ -34,6 +34,25 @@ struct PropertyDetailView: View {
                     value: property.address
                 )
             }
+            
+            Section("Guest Access") {
+                LabeledContent(
+                    "Access Code",
+                    value: property.accessCode
+                )
+
+                Button {
+                    UIPasteboard.general.string = property.accessCode
+                } label: {
+                    Label("Copy Access Code", systemImage: "doc.on.doc")
+                }
+                .disabled(property.accessCode.isEmpty)
+
+                Text("Share this code with your guests so they can access the property information.")
+                    .font(.footnote)
+                    .foregroundStyle(.secondary)
+            }
+
 
             Section("Wi-Fi Information") {
 

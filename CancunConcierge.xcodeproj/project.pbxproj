@@ -107,6 +107,7 @@
 		84DAD3BD309002FE001BE4CE /* AdminLoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminLoginViewModel.swift; sourceTree = "<group>"; };
 		84DAD3C03090049F001BE4CE /* AdminLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminLoginView.swift; sourceTree = "<group>"; };
 		84DAD3C230900E8B001BE4CE /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		84E6AD2F30A378CA00288575 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		B125F3E9308E961B005D340B /* MaintenanceStatusBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceStatusBadge.swift; sourceTree = "<group>"; };
 		B125F3EB308EA98C005D340B /* MaintenanceDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceDetailView.swift; sourceTree = "<group>"; };
 		B1A91F333086BD4300A97A28 /* TestArticleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestArticleResponse.swift; sourceTree = "<group>"; };
@@ -205,6 +206,7 @@
 		84913F91307EA449008FF1D8 /* CancunConcierge */ = {
 			isa = PBXGroup;
 			children = (
+				84E6AD2F30A378CA00288575 /* Info.plist */,
 				B1A91F323086BD2700A97A28 /* Networking */,
 				84913FCA307EE6BC008FF1D8 /* Shared */,
 				84913FBC307EA5EC008FF1D8 /* Features */,
@@ -780,6 +782,7 @@
 				DEVELOPMENT_TEAM = 63KDPU835H;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CancunConcierge/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -811,6 +814,7 @@
 				DEVELOPMENT_TEAM = 63KDPU835H;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CancunConcierge/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
