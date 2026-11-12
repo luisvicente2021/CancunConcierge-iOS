@@ -19,7 +19,7 @@ struct CancunConciergeApp: App {
         FirebaseApp.configure()
 
         #if DEBUG
-        let emulatorHost = "192.168.22.11"
+        let emulatorHost = "192.168.22.2"
 
         Auth.auth().useEmulator(
             withHost: emulatorHost,

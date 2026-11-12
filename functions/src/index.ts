@@ -223,6 +223,83 @@ export const createProperty = onCall(
   }
 );
 
+
+export const redeemGuestAccessCode = onCall(
+  {maxInstances: 5},
+  async (request) => {
+    if (!request.auth) {
+      throw new HttpsError(
+        "unauthenticated",
+        "You must be signed in."
+      );
+    }
+
+    const accessCode = request.data?.accessCode;
+
+    if (
+      typeof accessCode !== "string" ||
+      !/^CN-[A-HJ-NP-Z2-9]{10}$/.test(accessCode)
+    ) {
+      throw new HttpsError(
+        "invalid-argument",
+        "Invalid access code format."
+      );
+    }
+
+    const db = getFirestore();
+    const guestId = request.auth.uid;
+
+    const codeRef = db
+      .collection("property_access_codes")
+      .doc(accessCode);
+
+    const codeDocument = await codeRef.get();
+
+    if (!codeDocument.exists) {
+      throw new HttpsError(
+        "not-found",
+        "Access code not found."
+      );
+    }
+
+    const propertyId = codeDocument.data()?.propertyId;
+
+    if (typeof propertyId !== "string") {
+      throw new HttpsError(
+        "internal",
+        "Invalid property reference."
+      );
+    }
+
+    const propertyDocument = await db
+      .collection("properties")
+      .doc(propertyId)
+      .get();
+
+    if (!propertyDocument.exists) {
+      throw new HttpsError(
+        "not-found",
+        "Property not found."
+      );
+    }
+
+    await db
+      .collection("guest_property_access")
+      .doc(guestId)
+      .set({
+        guestId,
+        propertyId,
+        createdAt: new Date(),
+      });
+
+    return {
+      success: true,
+      propertyId,
+    };
+  }
+);
+
+
 // export const helloWorld = onRequest((request, response) => {
 //   logger.info("Hello logs!", {structuredData: true});
 //   response.send("Hello from Firebase!");

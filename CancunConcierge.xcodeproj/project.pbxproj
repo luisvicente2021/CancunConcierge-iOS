@@ -18,6 +18,14 @@
 		8443EA41309292C100F7C28D /* PropertyCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443EA40309292C100F7C28D /* PropertyCreateView.swift */; };
 		8443EA433093DEA800F7C28D /* AccessCodeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443EA423093DEA800F7C28D /* AccessCodeGenerator.swift */; };
 		8443EA45309921FB00F7C28D /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = 8443EA44309921FB00F7C28D /* FirebaseFunctions */; };
+		8446ADC830A6334500088620 /* GuestAccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446ADC530A6334500088620 /* GuestAccessView.swift */; };
+		8446ADC930A6334600088620 /* GuestAccessService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446ADC730A6334500088620 /* GuestAccessService.swift */; };
+		8446ADCF30A6344000088620 /* GuestAnnouncementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446ADCD30A6344000088620 /* GuestAnnouncementView.swift */; };
+		8446ADD130A6352F00088620 /* AnnouncementService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446ADD030A6352F00088620 /* AnnouncementService.swift */; };
+		8446ADD730A6374000088620 /* Announcement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446ADD630A6374000088620 /* Announcement.swift */; };
+		8446ADD930A638B900088620 /* AnnouncementListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446ADD830A638B900088620 /* AnnouncementListView.swift */; };
+		8446ADDB30A63A7E00088620 /* AnnouncementCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446ADDA30A63A7E00088620 /* AnnouncementCreateView.swift */; };
+		8446ADDD30A642EB00088620 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 8446ADDC30A642EA00088620 /* Localizable.xcstrings */; };
 		84913F93307EA449008FF1D8 /* CancunConciergeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84913F92307EA449008FF1D8 /* CancunConciergeApp.swift */; };
 		84913F97307EA453008FF1D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84913F96307EA453008FF1D8 /* Assets.xcassets */; };
 		84913F9A307EA453008FF1D8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84913F99307EA453008FF1D8 /* Preview Assets.xcassets */; };
@@ -82,6 +90,14 @@
 		8443EA3E3092920100F7C28D /* PropertyCreateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyCreateViewModel.swift; sourceTree = "<group>"; };
 		8443EA40309292C100F7C28D /* PropertyCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyCreateView.swift; sourceTree = "<group>"; };
 		8443EA423093DEA800F7C28D /* AccessCodeGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessCodeGenerator.swift; sourceTree = "<group>"; };
+		8446ADC530A6334500088620 /* GuestAccessView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestAccessView.swift; sourceTree = "<group>"; };
+		8446ADC730A6334500088620 /* GuestAccessService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestAccessService.swift; sourceTree = "<group>"; };
+		8446ADCD30A6344000088620 /* GuestAnnouncementView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestAnnouncementView.swift; sourceTree = "<group>"; };
+		8446ADD030A6352F00088620 /* AnnouncementService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnouncementService.swift; sourceTree = "<group>"; };
+		8446ADD630A6374000088620 /* Announcement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Announcement.swift; sourceTree = "<group>"; };
+		8446ADD830A638B900088620 /* AnnouncementListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnouncementListView.swift; sourceTree = "<group>"; };
+		8446ADDA30A63A7E00088620 /* AnnouncementCreateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnouncementCreateView.swift; sourceTree = "<group>"; };
+		8446ADDC30A642EA00088620 /* Localizable.xcstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		84913F8F307EA449008FF1D8 /* CancunConcierge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CancunConcierge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84913F92307EA449008FF1D8 /* CancunConciergeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancunConciergeApp.swift; sourceTree = "<group>"; };
 		84913F94307EA449008FF1D8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -151,6 +167,8 @@
 		8443EA2C30913AD500F7C28D /* Admin */ = {
 			isa = PBXGroup;
 			children = (
+				8446ADD530A636FF00088620 /* Models */,
+				8446ADD230A6354600088620 /* Services */,
 				8443EA2D30913ADD00F7C28D /* Views */,
 			);
 			path = Admin;
@@ -159,6 +177,8 @@
 		8443EA2D30913ADD00F7C28D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8446ADDA30A63A7E00088620 /* AnnouncementCreateView.swift */,
+				8446ADD830A638B900088620 /* AnnouncementListView.swift */,
 				8443EA2E30913B0F00F7C28D /* AdminDashboardView.swift */,
 			);
 			path = Views;
@@ -180,6 +200,87 @@
 				8443EA3E3092920100F7C28D /* PropertyCreateViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8446ADC230A6334500088620 /* Guest */ = {
+			isa = PBXGroup;
+			children = (
+				8446ADC330A6334500088620 /* Models */,
+				8446ADC430A6334500088620 /* Views */,
+				8446ADC630A6334500088620 /* GuestAccessService */,
+			);
+			path = Guest;
+			sourceTree = "<group>";
+		};
+		8446ADC330A6334500088620 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8446ADC430A6334500088620 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8446ADC530A6334500088620 /* GuestAccessView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8446ADC630A6334500088620 /* GuestAccessService */ = {
+			isa = PBXGroup;
+			children = (
+				8446ADC730A6334500088620 /* GuestAccessService.swift */,
+			);
+			path = GuestAccessService;
+			sourceTree = "<group>";
+		};
+		8446ADCA30A6344000088620 /* Announcements */ = {
+			isa = PBXGroup;
+			children = (
+				8446ADCB30A6344000088620 /* Models */,
+				8446ADCC30A6344000088620 /* Views */,
+				8446ADCE30A6344000088620 /* Services */,
+			);
+			path = Announcements;
+			sourceTree = "<group>";
+		};
+		8446ADCB30A6344000088620 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8446ADCC30A6344000088620 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8446ADCD30A6344000088620 /* GuestAnnouncementView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8446ADCE30A6344000088620 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		8446ADD230A6354600088620 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8446ADD030A6352F00088620 /* AnnouncementService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		8446ADD530A636FF00088620 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8446ADD630A6374000088620 /* Announcement.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		84913F86307EA449008FF1D8 = {
@@ -206,6 +307,7 @@
 		84913F91307EA449008FF1D8 /* CancunConcierge */ = {
 			isa = PBXGroup;
 			children = (
+				8446ADDC30A642EA00088620 /* Localizable.xcstrings */,
 				84E6AD2F30A378CA00288575 /* Info.plist */,
 				B1A91F323086BD2700A97A28 /* Networking */,
 				84913FCA307EE6BC008FF1D8 /* Shared */,
@@ -247,6 +349,8 @@
 		84913FBC307EA5EC008FF1D8 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				8446ADCA30A6344000088620 /* Announcements */,
+				8446ADC230A6334500088620 /* Guest */,
 				8443EA2C30913AD500F7C28D /* Admin */,
 				B1A91F413086EBAA00A97A28 /* Authentication */,
 				84913FCE307FD520008FF1D8 /* Maintenance */,
@@ -554,6 +658,7 @@
 			files = (
 				84913F9A307EA453008FF1D8 /* Preview Assets.xcassets in Resources */,
 				B1A91F3D3086C98000A97A28 /* GoogleService-Info.plist in Resources */,
+				8446ADDD30A642EB00088620 /* Localizable.xcstrings in Resources */,
 				84913F97307EA453008FF1D8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -579,6 +684,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8446ADC830A6334500088620 /* GuestAccessView.swift in Sources */,
+				8446ADD930A638B900088620 /* AnnouncementListView.swift in Sources */,
+				8446ADDB30A63A7E00088620 /* AnnouncementCreateView.swift in Sources */,
 				84DAD3B6308FE643001BE4CE /* MaintenanceDetailViewModel.swift in Sources */,
 				B1A91F463086F76D00A97A28 /* MaintenanceError.swift in Sources */,
 				8443EA323091455B00F7C28D /* PropertyService.swift in Sources */,
@@ -591,6 +699,7 @@
 				8443EA39309280CF00F7C28D /* PropertyDetailView.swift in Sources */,
 				84DAD3C330900E8B001BE4CE /* UserService.swift in Sources */,
 				84DAD3BB30900085001BE4CE /* AppUser.swift in Sources */,
+				8446ADD730A6374000088620 /* Announcement.swift in Sources */,
 				B1EF137E30898BA4000197EF /* MaintenanceRecord.swift in Sources */,
 				8443EA3D309283D600F7C28D /* PropertyEditView.swift in Sources */,
 				84913FDA307FE535008FF1D8 /* MaintenanceStatus.swift in Sources */,
@@ -603,13 +712,16 @@
 				84913FC6307EAAF9008FF1D8 /* PropertyView.swift in Sources */,
 				84913FD6307FD7B2008FF1D8 /* MaintenanceViewModel.swift in Sources */,
 				B125F3EC308EA98C005D340B /* MaintenanceDetailView.swift in Sources */,
+				8446ADCF30A6344000088620 /* GuestAnnouncementView.swift in Sources */,
 				84913F93307EA449008FF1D8 /* CancunConciergeApp.swift in Sources */,
 				84913FCD307EE6E2008FF1D8 /* InfoCardView.swift in Sources */,
 				8443EA3F3092920200F7C28D /* PropertyCreateViewModel.swift in Sources */,
 				84DAD3B9308FFFAD001BE4CE /* UserRole.swift in Sources */,
 				84DAD3BE309002FE001BE4CE /* AdminLoginViewModel.swift in Sources */,
 				84913FD8307FD9E4008FF1D8 /* MaintenanceView.swift in Sources */,
+				8446ADD130A6352F00088620 /* AnnouncementService.swift in Sources */,
 				84DAD3C13090049F001BE4CE /* AdminLoginView.swift in Sources */,
+				8446ADC930A6334600088620 /* GuestAccessService.swift in Sources */,
 				8443EA41309292C100F7C28D /* PropertyCreateView.swift in Sources */,
 				B1A91F343086BD5100A97A28 /* TestArticleResponse.swift in Sources */,
 				84913FC2307EA714008FF1D8 /* ContentView.swift in Sources */,

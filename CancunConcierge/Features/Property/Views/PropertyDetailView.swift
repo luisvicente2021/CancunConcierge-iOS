@@ -13,7 +13,7 @@ struct PropertyDetailView: View {
     private let propertyService = PropertyService()
 
     @State private var errorMessage: String?
-    
+
     init(property: Property) {
         _property = State(initialValue: property)
     }
@@ -34,7 +34,20 @@ struct PropertyDetailView: View {
                     value: property.address
                 )
             }
-            
+
+
+            Section("Announcements") {
+                NavigationLink {
+                    AnnouncementListView(propertyId: property.id)
+                } label: {
+                    Label(
+                        "View Announcements",
+                        systemImage: "megaphone.fill"
+                    )
+                }
+            }
+
+
             Section("Guest Access") {
                 LabeledContent(
                     "Access Code",
@@ -91,14 +104,14 @@ struct PropertyDetailView: View {
                 }
             }
         }
-        
+
         .onAppear {
             Task {
                 await reloadProperty()
             }
         }
     }
-    
+
     private func reloadProperty() async {
         do {
             if let updatedProperty = try await propertyService.getProperty(

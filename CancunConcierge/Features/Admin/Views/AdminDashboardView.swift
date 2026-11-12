@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct AdminDashboardView: View {
-    
+
     @Environment(\.dismiss) private var dismiss
 
     private let authService = AuthService()
 
     @State private var errorMessage: String?
-    
+
     var body: some View {
         VStack(spacing: 24) {
 
@@ -52,10 +52,6 @@ struct AdminDashboardView: View {
                     icon: "megaphone.fill"
                 )
 
-                dashboardButton(
-                    title: "Invitations",
-                    icon: "envelope.fill"
-                )
             }
             Button("Sign Out") {
                 do {
@@ -79,7 +75,7 @@ struct AdminDashboardView: View {
     }
 
     private func dashboardButton(
-        title: String,
+        title: LocalizedStringKey,
         icon: String
     ) -> some View {
 
