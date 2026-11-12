@@ -26,3 +26,19 @@ firebase-debug*.log
 
 # Archivos de respaldo
 *.backup
+
+# Firebase Emulator
+emulator-data/
+firestore-debug.log
+
+# Respaldos locales
+*.respaldo
+*.bak
+
+# Archivos temporales de Python
+__pycache__/
+*.pyc
+
+# Herramientas locales de desarrollo
+.agents/
+skills-lock.json
