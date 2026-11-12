@@ -26,6 +26,7 @@
 		8446ADD930A638B900088620 /* AnnouncementListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446ADD830A638B900088620 /* AnnouncementListView.swift */; };
 		8446ADDB30A63A7E00088620 /* AnnouncementCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446ADDA30A63A7E00088620 /* AnnouncementCreateView.swift */; };
 		8446ADDD30A642EB00088620 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 8446ADDC30A642EA00088620 /* Localizable.xcstrings */; };
+		8446ADDF30A6564D00088620 /* GuestDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446ADDE30A6564D00088620 /* GuestDashboardView.swift */; };
 		84913F93307EA449008FF1D8 /* CancunConciergeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84913F92307EA449008FF1D8 /* CancunConciergeApp.swift */; };
 		84913F97307EA453008FF1D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84913F96307EA453008FF1D8 /* Assets.xcassets */; };
 		84913F9A307EA453008FF1D8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84913F99307EA453008FF1D8 /* Preview Assets.xcassets */; };
@@ -98,6 +99,7 @@
 		8446ADD830A638B900088620 /* AnnouncementListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnouncementListView.swift; sourceTree = "<group>"; };
 		8446ADDA30A63A7E00088620 /* AnnouncementCreateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnouncementCreateView.swift; sourceTree = "<group>"; };
 		8446ADDC30A642EA00088620 /* Localizable.xcstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		8446ADDE30A6564D00088620 /* GuestDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestDashboardView.swift; sourceTree = "<group>"; };
 		84913F8F307EA449008FF1D8 /* CancunConcierge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CancunConcierge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84913F92307EA449008FF1D8 /* CancunConciergeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancunConciergeApp.swift; sourceTree = "<group>"; };
 		84913F94307EA449008FF1D8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				8446ADC530A6334500088620 /* GuestAccessView.swift */,
+				8446ADDE30A6564D00088620 /* GuestDashboardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -722,6 +725,7 @@
 				8446ADD130A6352F00088620 /* AnnouncementService.swift in Sources */,
 				84DAD3C13090049F001BE4CE /* AdminLoginView.swift in Sources */,
 				8446ADC930A6334600088620 /* GuestAccessService.swift in Sources */,
+				8446ADDF30A6564D00088620 /* GuestDashboardView.swift in Sources */,
 				8443EA41309292C100F7C28D /* PropertyCreateView.swift in Sources */,
 				B1A91F343086BD5100A97A28 /* TestArticleResponse.swift in Sources */,
 				84913FC2307EA714008FF1D8 /* ContentView.swift in Sources */,

@@ -112,6 +112,16 @@ allow delete: if false;
           && get(/databases/$(database)/documents/properties/$(propertyId)).data.ownerId == request.auth.uid;
       }
 
+function hasGuestAccess(propertyId) {
+  return request.auth != null
+    && exists(
+      /databases/$(database)/documents/guest_property_access/$(request.auth.uid)
+    )
+    && get(
+      /databases/$(database)/documents/guest_property_access/$(request.auth.uid)
+    ).data.propertyId == propertyId;
+}
+
       // Crear anuncios
       allow create: if request.resource.data.keys().hasOnly([
           'propertyId',
@@ -137,7 +147,11 @@ allow delete: if false;
         && request.resource.data.isActive == true;
 
       // Consultar anuncios de propiedades propias
-      allow get, list: if ownsProperty(resource.data.propertyId);
+      allow get, list: if ownsProperty(resource.data.propertyId)
+  || (
+    hasGuestAccess(resource.data.propertyId)
+    && resource.data.isActive == true
+  );
 
       // Edición y eliminación pendientes de implementar
      allow update: if ownsProperty(resource.data.propertyId)

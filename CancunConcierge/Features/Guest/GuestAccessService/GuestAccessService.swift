@@ -13,6 +13,9 @@ final class GuestAccessService {
 
     private let functions = Functions.functions()
 
+    func signOutCurrentUser() throws {
+        try Auth.auth().signOut()
+    }
 
     func signInGuest() async throws {
         if let currentUser = Auth.auth().currentUser {

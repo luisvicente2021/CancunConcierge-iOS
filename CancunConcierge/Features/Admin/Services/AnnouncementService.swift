@@ -73,9 +73,39 @@ final class AnnouncementService {
         .sorted { $0.createdAt > $1.createdAt }
     }
 
-    func fetchActiveAnnouncements(propertyId: String) async throws -> [Announcement] {
-        let announcements = try await fetchAnnouncements(propertyId: propertyId)
 
-        return announcements.filter { $0.isActive }
+    func fetchActiveAnnouncements(propertyId: String) async throws -> [Announcement] {
+
+        let snapshot = try await db
+            .collection("announcements")
+            .whereField("propertyId", isEqualTo: propertyId)
+            .whereField("isActive", isEqualTo: true)
+            .getDocuments()
+
+        return snapshot.documents.compactMap { document in
+
+            let data = document.data()
+
+            guard
+                let propertyId = data["propertyId"] as? String,
+                let title = data["title"] as? String,
+                let message = data["message"] as? String
+            else {
+                return nil
+            }
+
+            let timestamp = data["createdAt"] as? Timestamp
+
+            return Announcement(
+                id: document.documentID,
+                propertyId: propertyId,
+                title: title,
+                message: message,
+                createdAt: timestamp?.dateValue() ?? Date(),
+                isActive: data["isActive"] as? Bool ?? false
+            )
+        }
+        .sorted { $0.createdAt > $1.createdAt }
     }
+
 }

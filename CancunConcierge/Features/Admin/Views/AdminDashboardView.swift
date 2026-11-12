@@ -47,12 +47,18 @@ struct AdminDashboardView: View {
                     icon: "wrench.fill"
                 )
 
-                dashboardButton(
-                    title: "Announcements",
-                    icon: "megaphone.fill"
-                )
 
+                NavigationLink {
+                    PropertyListView()
+                } label: {
+                    dashboardButton(
+                        title: "Announcements",
+                        icon: "megaphone.fill"
+                    )
+                }
+                .buttonStyle(.plain)
             }
+
             Button("Sign Out") {
                 do {
                     try authService.signOut()
